@@ -7,8 +7,8 @@ import './table.css';
 const SortingTable = () => {
 
   // useMemo to memoize columns - to ensure data is not recalculated
-  // const columns = useMemo(()=> COLUMNS, []);
-  const columns = useMemo(()=> GROUPED_COLUMNS, []);
+  // const columns = useMemo(()=> GROUPED_COLUMNS, []);
+  const columns = useMemo(()=> COLUMNS, []);
   const data = useMemo(()=> MOCK_DATA, []);
 
   const {getTableProps, getTableBodyProps, headerGroups, footerGroups, rows, prepareRow} = useTable({
