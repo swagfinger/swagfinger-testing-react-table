@@ -10,3 +10,8 @@
 
 5. use table instance (step3) - to bring html (step4) to life
 6. include desired css
+
+## Filtering
+
+- global (all columns) - search all columns for matching data (filtering is on client side)
+- column filtering - only that column contains search text
