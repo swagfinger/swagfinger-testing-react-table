@@ -11,7 +11,7 @@ const PaginationTable = () => {
   const columns = useMemo(()=> COLUMNS, []);
   const data = useMemo(()=> MOCK_DATA, []);
 
-  const {getTableProps, getTableBodyProps, headerGroups, footerGroups, page, prepareRow, nextPage, previousPage, canNextPage, canPreviousPage, pageOptions, state, gotoPage, pageCount} = useTable({
+  const {getTableProps, getTableBodyProps, headerGroups, footerGroups, page, prepareRow, nextPage, previousPage, canNextPage, canPreviousPage, pageOptions, state, gotoPage, pageCount, setPageSize} = useTable({
     columns,
     data,
     initialState:{
@@ -19,7 +19,7 @@ const PaginationTable = () => {
     }
   }, usePagination);
 
-  const {pageIndex} = state;
+  const {pageIndex, pageSize} = state;
 
   return ( 
     <>
@@ -71,6 +71,13 @@ const PaginationTable = () => {
       
       style={{width: '50px'}}
       /></span>
+      <select value={pageSize} onChange={e=> setPageSize(Number(e.target.value))}>
+        {
+          [10,25,50].map(pageSize=>{
+            return <option key={pageSize} value={pageSize}>Show {pageSize}</option>
+          })
+        }
+      </select>
       <button onClick={()=> gotoPage(0)} disabled={!canPreviousPage}>{'<<'}</button>
       <button onClick={()=> previousPage()} disabled={!canPreviousPage}>previous</button>
       <button onClick={()=> nextPage()} disabled={!canNextPage}>next</button>
