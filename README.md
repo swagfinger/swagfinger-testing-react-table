@@ -15,3 +15,12 @@
 
 - global (all columns) - search all columns for matching data (filtering is on client side)
 - column filtering - only that column contains search text
+
+## Pagination
+
+- Page Data and implement next/previous
+- Jump to a page
+- Configure page size
+
+- remove <tfoot>
+- replace 'rows' with 'page'
