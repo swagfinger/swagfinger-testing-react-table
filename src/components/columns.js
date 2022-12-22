@@ -1,24 +1,25 @@
 import {format} from 'date-fns';
-import {ColumnFilter} from './ColumnFilter';
+//import {ColumnFilter} from './ColumnFilter'; //using global setting in FilteringTable: defaultColumn
 
 export const COLUMNS = [
   {
     Header: 'Id',
     Footer: 'Id',
     accessor: 'id',
-    Filter: ColumnFilter
+    disableFilters:true,
+    //Filter: ColumnFilter
   },
   {
     Header:'First Name',
     Footer:'First Name',
     accessor:'first_name',
-    Filter: ColumnFilter
+    //Filter: ColumnFilter
   },
   {
     Header: 'Last Name',
     Footer: 'Last Name',
     accessor:'last_name',
-    Filter: ColumnFilter
+    //Filter: ColumnFilter
   },
   {
     Header: 'Date of Birth',
@@ -28,19 +29,19 @@ export const COLUMNS = [
     Cell: ({value})=>{
       return format(new Date(value), 'yyyy-mm-dd')
     },
-    Filter: ColumnFilter
+    //Filter: ColumnFilter
   },
   {
     Header: 'Country',
     Footer: 'Country',
     accessor: 'country',
-    Filter: ColumnFilter
+    //Filter: ColumnFilter
   },
   {
     Header: 'Phone',
     Footer: 'Phone',
     accessor: 'phone',
-    Filter: ColumnFilter
+    //Filter: ColumnFilter
   }
   
 ];
