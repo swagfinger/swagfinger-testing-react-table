@@ -14,9 +14,20 @@ const BasicTable = () => {
     data
   })
 
-  return ( <div>
-
-  </div>);
+  return ( <table>
+    <thead>
+      <tr>
+        <th>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+        </td>
+      </tr>
+    </tbody>
+  </table>);
 }
  
 export default BasicTable;
