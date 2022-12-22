@@ -24,3 +24,5 @@
 
 - remove <tfoot>
 - replace 'rows' with 'page'
+- to page between pages, destruct 'nextPage' and 'previousPage' from useTable
+- canNextPage, canPreviousPage
