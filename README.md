@@ -1,5 +1,8 @@
 # react table
 
+tutorial - https://www.youtube.com/watch?v=YwP4NAZGskg&list=PLC3y8-rFHvwgWTSrDiwmUsl4ZvipOw9Cz&ab_channel=Codevolution
+github - https://github.com/gopinav/React-Table-Tutorials
+
 ## basic table
 
 1. get data you want to display (mockaroo.com)
